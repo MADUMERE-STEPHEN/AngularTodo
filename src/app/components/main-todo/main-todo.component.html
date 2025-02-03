@@ -36,7 +36,7 @@
     </div>
   
     <div class="todo-section mt-5">
-      <p class="lead">Tasks to do - {{ todos.length }}</p>
+      <p class="lead">Tasks to do - {{uncompletedTodos().length}}</p>
       <div *ngFor="let todo of todos let i = index" class="todo-item" [class.Mycompleted]="todo.completed" >
         <label class="neon-checkbox">
             <input  class="checked" type="checkbox" [class.comleted]="todo.completed"[checked]="todo.completed " (change)="toggleComplete(i)" />

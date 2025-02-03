@@ -15,7 +15,9 @@ export class MainTodoComponent {
     return this.todos.filter(todo => todo.completed);
 
   }
-
+  uncompletedTodos() {
+    return this.todos.filter(todo => !todo.completed);
+  }
 
   todoCount = this.todos.length
   addTodo(){
